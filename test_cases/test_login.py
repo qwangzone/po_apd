@@ -10,7 +10,7 @@ from selenium import webdriver
 
 class TestLogin(unittest.TestCase):
     def setUp(self):
-        self.dr = webdriver.Chrome()
+        self.dr = webdriver.Firefox()
         self.dr.maximize_window()
 
     #登录成功
@@ -49,14 +49,14 @@ class TestLogin(unittest.TestCase):
     def tearDown(self):
         self.dr.quit()
 if __name__ == '__main__':
-    """
+    
     suit = unittest.TestSuite()
-    suit.addTest(TestLogin('test_null_username_password'))
+    #suit.addTest(TestLogin('test_null_username_password'))
     suit.addTest(TestLogin('test_login_success'))
     runner = unittest.TextTestRunner()
     runner.run(suit)
-    """
-    unittest.main()
+   
+    #unittest.main()
 
 
 
