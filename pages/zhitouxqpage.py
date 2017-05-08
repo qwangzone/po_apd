@@ -20,7 +20,7 @@ class ZhitouxqPage(BasePage):
         time.sleep(3)
         self.money_text.send_keys(money)
         self.touzi_button.click()
-        #return ZhitouzfPage(self.driver)
+        return ZhitouzfPage(self.driver)
 
     #错误提示
     def error_text(self):

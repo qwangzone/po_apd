@@ -5,7 +5,6 @@ import sys
 sys.path.append("..\pages")
 from loginpage import LoginPage
 from zhitouxqpage import ZhitouxqPage
-from zhitouzfpage import ZhitouzfPage
 
 
 class TestZhitoutz(unittest.TestCase):
@@ -19,9 +18,7 @@ class TestZhitoutz(unittest.TestCase):
         self.touzi_p = ZhitouxqPage(self.dr)
     def test_zhitoutz(self):
         """投资成功"""
-        #zhifu_p = self.touzi_p.toubiao("100")
-        self.touzi_p.toubiao("100")
-        zhifu_p = ZhitouzfPage(self.dr)
+        zhifu_p = self.touzi_p.toubiao("100")
         time.sleep(3)
         print (zhifu_p.zhifubutton().text)
         zhifu_p.zhifubutton().click()
