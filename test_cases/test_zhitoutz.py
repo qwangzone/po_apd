@@ -1,9 +1,11 @@
+#coding:utf-8
 from selenium import webdriver
 import time, unittest
 import sys
 sys.path.append("..\pages")
 from loginpage import LoginPage
 from zhitouxqpage import ZhitouxqPage
+from zhitouzfpage import ZhitouzfPage
 
 
 class TestZhitoutz(unittest.TestCase):
@@ -17,8 +19,11 @@ class TestZhitoutz(unittest.TestCase):
         self.touzi_p = ZhitouxqPage(self.dr)
     def test_zhitoutz(self):
         """投资成功"""
-        zhifu_p = self.touzi_p.toubiao("100")
+        #zhifu_p = self.touzi_p.toubiao("100")
+        self.touzi_p.toubiao("100")
+        zhifu_p = ZhitouzfPage(self.dr)
         time.sleep(3)
+        print (zhifu_p.zhifubutton().text)
         zhifu_p.zhifubutton().click()
         time.sleep(1000)
         #断言
@@ -51,15 +56,17 @@ class TestZhitoutz(unittest.TestCase):
         self.touzi_p.toubiao(input_number)
         error_txt = self.touzi_p.error_text().text
         self.assertEqual(error_txt, "对不起，您的账户余额小于投标金额。")
-
+    def test_chrome(self):
+        print (2222)
 
     def tearDown(self):
-        self.dr.quit()
+        self.quit()
+
 
 
 if __name__ == '__main__':
     suit = unittest.TestSuite()
-    suit.addTest(TestZhitoutz('test_than_balance'))
+    suit.addTest(TestZhitoutz('test_zhitoutz'))
     runner = unittest.TextTestRunner()
     runner.run(suit)
     #unittest.main()
