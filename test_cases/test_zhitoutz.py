@@ -3,26 +3,29 @@ from selenium import webdriver
 import time, unittest
 import sys
 sys.path.append("..\pages")
+sys.path.append("..\myunit")
+sys.path.append("..\driver")
+import myunit
 from loginpage import LoginPage
 from zhitouxqpage import ZhitouxqPage
 
 
-class TestZhitoutz(unittest.TestCase):
+class TestZhitoutz(myunit.MyTest):
     def setUp(self):
         self.dr = webdriver.Chrome()
         self.dr.maximize_window()
         #调用登录方法
         login_p = LoginPage(self.dr)
-        login_p.login_action("wq1qaz_", "wq15803863660")
+        login_p.login_action("14458524694", "14458524694")
         time.sleep(3)
         self.touzi_p = ZhitouxqPage(self.dr)
+
     def test_zhitoutz(self):
         """投资成功"""
         zhifu_p = self.touzi_p.toubiao("100")
         time.sleep(3)
-        print (zhifu_p.zhifubutton().text)
-        zhifu_p.zhifubutton().click()
-        time.sleep(1000)
+        zhifu_p.zhifubutton()
+        time.sleep(3)
         #断言
 
     def test_less100(self):
@@ -53,11 +56,12 @@ class TestZhitoutz(unittest.TestCase):
         self.touzi_p.toubiao(input_number)
         error_txt = self.touzi_p.error_text().text
         self.assertEqual(error_txt, "对不起，您的账户余额小于投标金额。")
+
     def test_chrome(self):
         print (2222)
 
     def tearDown(self):
-        self.quit()
+        self.dr.quit()
 
 
 

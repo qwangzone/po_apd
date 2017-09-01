@@ -5,7 +5,7 @@ import time
 
 
 class ZhitouxqPage(BasePage):
-    url = "project/info/29102"
+    url = "/licai/12352"
 
     @property
     def money_text(self):
@@ -15,11 +15,17 @@ class ZhitouxqPage(BasePage):
     def touzi_button(self):
         return self.By_css("input[type='submit']")
 
+    @property
+    def queren(self):
+        return self.By_id("okcp")
+
+
     def toubiao(self, money):
         self.open()
         time.sleep(3)
         self.money_text.send_keys(money)
         self.touzi_button.click()
+        self.queren.click()
         return ZhitouzfPage(self.driver)
 
     #错误提示
