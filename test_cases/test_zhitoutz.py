@@ -16,7 +16,7 @@ class TestZhitoutz(myunit.MyTest):
         self.dr.maximize_window()
         #调用登录方法
         login_p = LoginPage(self.dr)
-        login_p.login_action("14458524694", "14458524694")
+        login_p.login_action("14458524699", "14458524699")
         time.sleep(3)
         self.touzi_p = ZhitouxqPage(self.dr)
 
@@ -56,9 +56,6 @@ class TestZhitoutz(myunit.MyTest):
         self.touzi_p.toubiao(input_number)
         error_txt = self.touzi_p.error_text().text
         self.assertEqual(error_txt, "对不起，您的账户余额小于投标金额。")
-
-    def test_chrome(self):
-        print (2222)
 
     def tearDown(self):
         self.dr.quit()

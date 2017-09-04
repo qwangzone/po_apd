@@ -31,6 +31,9 @@ class LoginPage(BasePage):
     def null_password(self):
         return self.By_css("div.register_tis.dis_ib>span")
 
+    def alert_error(self):
+        return self.By_css("div.alert-error>ul>li")
+
 
 
 
