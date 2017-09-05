@@ -1,5 +1,6 @@
 #coding=utf-8
 from basepage import BasePage
+from myacountpage import MyacountPage
 import time
 
 class LoginPage(BasePage):
@@ -23,6 +24,7 @@ class LoginPage(BasePage):
         self.password_textfield.send_keys(password)
         time.sleep(5)
         self.button_click.click()
+        return MyacountPage(self.driver)
 
     #提示信息定位
     def null_username(self):

@@ -5,7 +5,7 @@ import time
 
 
 class ZhitouxqPage(BasePage):
-    url = "/licai/12352"
+    url = "/licai/12399"
 
     @property
     def money_text(self):
@@ -19,18 +19,26 @@ class ZhitouxqPage(BasePage):
     def queren(self):
         return self.By_id("okcp")
 
-
     def toubiao(self, money):
         self.open()
         time.sleep(3)
         self.money_text.send_keys(money)
         self.touzi_button.click()
         self.queren.click()
+        time.sleep(3)
         return ZhitouzfPage(self.driver)
+
+    def toubiao_error(self,money):
+        self.open()
+        time.sleep(3)
+        self.money_text.send_keys(money)
 
     #错误提示
     def error_text(self):
         return self.By_css("div.alert-error>ul>li")
+
+    def error_ajax(self):
+        return self.By_id("error-tip")
 
     #账户余额
     def my_balance(self):
