@@ -16,15 +16,15 @@ class TestLogin(unittest.TestCase):
         self.dr = driver.browser()
         self.dr.maximize_window()
         self.login_p = LoginPage(self.dr)
-    @parameterized.expand([("pwd_error", "1445854699", "14458524699", "用户名或密码不正确"),
-                           ("user_error", "14458524699", "1448524699", "用户名或密码不正确")])
-    #参数化用例,登录失败情况
-    def test_login(self, name, username, password, assert_text):
-        self.login_p.login_action(username, password)
-        time.sleep(2)
-        error_text = self.login_p.alert_error().text
-        print(error_text)
-        self.assertEqual(error_text, assert_text)
+    # @parameterized.expand([("pwd_error", "1445854699", "14458524699", "用户名或密码不正确"),
+    #                        ("user_error", "14458524699", "1448524699", "用户名或密码不正确")])
+    # #参数化用例,登录失败情况
+    # def test_login(self, name, username, password, assert_text):
+    #     self.login_p.login_action(username, password)
+    #     time.sleep(2)
+    #     error_text = self.login_p.alert_error().text
+    #     print(error_text)
+    #     self.assertEqual(error_text, assert_text)
 
     #登录成功
     def test_login_success(self):

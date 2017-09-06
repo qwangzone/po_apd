@@ -1,0 +1,37 @@
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.header import Header
+class SendMail:
+    def __init__(self, send_address, send_address_password, received_address, subject, content, subtype='plain'):
+        self.send_address = send_address
+        self.send_address_password = send_address_password
+        self.received_address = received_address
+        self.subject = subject
+        self.content = content
+        self.subtype = subtype
+
+    def send_mail(self):
+        msg = MIMEText(self.content, _subtype=self.subtype, _charset='utf-8')
+        msg['Subject'] = Header(self.subject, 'utf-8')
+        msg['From'] = Header('sad', 'utf-8')
+        msg['To'] = Header('wqng', 'utf-8')
+
+        smtp = smtplib.SMTP()
+        smtp.connect("smtp.126.com")
+        smtp.login(self.send_address, self.send_address_password)
+        smtp.sendmail(self.send_address, self.received_address, msg.as_string())
+
+        smtp.quit()
+        print("邮件发送成功！")
+
+if __name__ == '__main__':
+    send_addr = "sad120@126.com"
+    send_addr_pass = "wq15803863660@"
+    received_addr = "qiwang01@rongxinchina.net"
+    sub = "银行账单测试"
+    subt = 'html'
+    cont = "您的银行卡已入账1000万，请注意查收————测试"
+
+    wq = SendMail(send_addr, send_addr_pass, received_addr, sub, cont, subtype=subt)
+    wq.send_mail()
