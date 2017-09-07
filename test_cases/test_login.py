@@ -16,16 +16,16 @@ class TestLogin(unittest.TestCase):
         self.dr = driver.browser()
         self.dr.maximize_window()
         self.login_p = LoginPage(self.dr)
-    # @parameterized.expand([("pwd_error", "1445854699", "14458524699", "用户名或密码不正确"),
-    #                        ("user_error", "14458524699", "1448524699", "用户名或密码不正确")])
-    # #参数化用例,登录失败情况
-    # def test_login(self, name, username, password, assert_text):
-    #     self.login_p.login_action(username, password)
-    #     time.sleep(2)
-    #     error_text = self.login_p.alert_error().text
-    #     print(error_text)
-    #     self.assertEqual(error_text, assert_text)
-
+    @parameterized.expand([("pwd_error", "1445854699", "14458524699", "用户名或密码不正确"),
+                           ("user_error", "14458524699", "1448524699", "用户名或密码不正确")])
+    #参数化用例,登录失败情况
+    def test_login(self, name, username, password, assert_text):
+        self.login_p.login_action(username, password)
+        time.sleep(2)
+        error_text = self.login_p.alert_error().text
+        print(error_text)
+        self.assertEqual(error_text, assert_text)
+    #
     #登录成功
     def test_login_success(self):
         #login_p = LoginPage(self.dr)
@@ -36,6 +36,11 @@ class TestLogin(unittest.TestCase):
         assert_text = myacount_p.login_success_text().text
         print(assert_text)
         self.assertEqual(u"账户总览", assert_text, msg="++++++++++++++")
+
+    def test_error(self):
+        raise Exception("为了能完整发送邮件,运行到这，说明没问题")
+
+
     """
     #用户名、密码输入为空，系统提示输入用户名与密码
     def test_null_username_password(self):
