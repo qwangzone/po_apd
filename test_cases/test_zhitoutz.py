@@ -76,6 +76,7 @@ class TestZhitoutz(myunit.MyTest):
         error_txt = self.touzi_p.error_ajax().text
         print(error_txt)
         self.assertEqual(error_txt, "余额不足请进行充值")
+
     @classmethod
     def tearDownClass(self):
         self.dr.quit()
