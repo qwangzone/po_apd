@@ -1,6 +1,6 @@
 #coding=utf-8
 class BasePage(object):
-    base_url = "http://mk-1.apengdai.com/"
+    base_url = "http://mk-2.apengdai.com/"
 
     def __init__(self, driver, domain=base_url):
         self.driver = driver

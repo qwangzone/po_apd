@@ -16,7 +16,7 @@ def send_mail(file_new):
     with open(file_new, 'rb') as f:
         mail_body = f.read()
     print(file_new + "调用后")
-    print(mail_body)
+    #print(mail_body)
     # msg = MIMEText(mail_body, _subtype='html', _charset='utf-8')
     #发送内容为HTML的邮件
     # msg = MIMEText('<html><h1>你好！</h1></html>', 'html', 'utf-8')
@@ -46,8 +46,10 @@ if __name__ == '__main__':
     discover = unittest.defaultTestLoader.discover(dir, pattern="test_login.py", top_level_dir=None)
     now = time.strftime("%Y-%m-%d %H_%M_%S")
     filename = now + 'result.html'
-    fp = open(filename, 'wb')
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_name = base_dir + "/report/" + filename
+    fp = open(file_name, 'wb')
     runner = HTMLTestRunner(stream=fp, title="阿朋贷测试报告", description="环境：win10，浏览器：chrome")
     runner.run(discover)
     print(filename+"调用前")
-    send_mail(filename)
+    send_mail(file_name)
