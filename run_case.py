@@ -42,6 +42,7 @@ def send_mail(file_new):
     smtp.quit()
     print("邮件已发送!!")
 if __name__ == '__main__':
+    #test github
     dir = "./test_cases"
     discover = unittest.defaultTestLoader.discover(dir, pattern="test_login.py", top_level_dir=None)
     now = time.strftime("%Y-%m-%d %H_%M_%S")
