@@ -28,5 +28,8 @@ class BasePage(object):
     def By_tag_name(self, tagname):
         return self.driver.find_element_by_tag_name(tagname)
 
+    # def wait(self, timeout):
+    #     return WebdriverWait(self.driver, timeout)
+
 
 

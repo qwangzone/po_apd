@@ -1,6 +1,7 @@
 #coding=utf-8
 from basepage import BasePage
 from myacountpage import MyacountPage
+from selenium.webdriver.support.ui import WebDriverWait
 import time
 
 class LoginPage(BasePage):
