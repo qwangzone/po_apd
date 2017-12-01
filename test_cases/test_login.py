@@ -29,7 +29,7 @@ class TestLogin(unittest.TestCase):
     #登录成功
     def test_login_success(self):
         #login_p = LoginPage(self.dr)
-        myacount_p = self.login_p.login_action("15558524690", "15558524690")
+        myacount_p = self.login_p.login_action("15558524694", "15558524694")
         print(self.dr.current_url)
         #myacount_p = MyacountPage(self.dr)
         time.sleep(3)
@@ -37,8 +37,8 @@ class TestLogin(unittest.TestCase):
         print(assert_text)
         self.assertEqual(u"账户总览", assert_text, msg="++++++++++++++")
 
-    def test_error(self):
-        raise Exception("为了能完整发送邮件,运行到这，说明没问题，请忽略这条错误信息")
+   # def test_error(self):
+    #    raise Exception("为了能完整发送邮件,运行到这，说明没问题，请忽略这条错误信息")
 
 
     """
