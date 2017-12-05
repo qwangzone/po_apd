@@ -6,8 +6,8 @@ class BasePage(object):
         self.driver = driver
         self.domain = domain
 
-    def _open(self, ulr):
-        url = self.domain+self.url
+    def _open(self, url):
+        url = self.domain + url
         self.driver.get(url)
 
     def open(self):
@@ -28,8 +28,6 @@ class BasePage(object):
     def By_tag_name(self, tagname):
         return self.driver.find_element_by_tag_name(tagname)
 
-    # def wait(self, timeout):
-    #     return WebdriverWait(self.driver, timeout)
 
 
 
