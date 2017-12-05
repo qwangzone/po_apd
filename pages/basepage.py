@@ -1,4 +1,4 @@
-#coding=utf-8
+
 class BasePage(object):
     base_url = "http://mk-2.apengdai.com/"
 
