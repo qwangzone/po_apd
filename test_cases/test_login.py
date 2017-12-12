@@ -8,6 +8,7 @@ from loginpage import LoginPage
 from myacountpage import MyacountPage
 import unittest, time, driver
 from selenium import webdriver
+from selenium.webdriver.support.wait import WebDriverWait
 from parameterized import parameterized
 
 class TestLogin(unittest.TestCase):
@@ -21,6 +22,8 @@ class TestLogin(unittest.TestCase):
     #参数化用例,登录失败情况
     def test_login(self, name, username, password, assert_text):
         self.login_p.login_action(username, password)
+        element = self.login_p.alert_error()
+        WebDriverWait(self.dr, 3).until(lambda self: element.is_displayed())
         time.sleep(2)
         error_text = self.login_p.alert_error().text
         print(error_text)
@@ -70,13 +73,13 @@ class TestLogin(unittest.TestCase):
     def tearDownClass(self):
         self.dr.quit()
 if __name__ == '__main__':
-    # suit = unittest.TestSuite()
-    # #suit.addTest(TestLogin('test_login_success'))
-    # suit.addTest(TestLogin('test_login_success'))
-    # runner = unittest.TextTestRunner()
-    # runner.run(suit)
+    suit = unittest.TestSuite()
+    suit.addTest(TestLogin('test_login_success'))
+    #suit.addTest(TestLogin('test_login_success'))
+    runner = unittest.TextTestRunner()
+    runner.run(suit)
     #test
-    unittest.main()
+    #unittest.main()
 
 
 

@@ -1,4 +1,5 @@
-
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 class BasePage(object):
     base_url = "http://mk-2.apengdai.com/"
 
@@ -27,6 +28,9 @@ class BasePage(object):
 
     def By_tag_name(self, tagname):
         return self.driver.find_element_by_tag_name(tagname)
+
+    def My_wait(self, locator):
+        return WebDriverWait(self.driver, 5).until(EC.presence_of_element_located(locator))
 
 
 
