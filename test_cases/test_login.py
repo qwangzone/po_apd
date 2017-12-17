@@ -22,9 +22,6 @@ class TestLogin(unittest.TestCase):
     #参数化用例,登录失败情况
     def test_login(self, name, username, password, assert_text):
         self.login_p.login_action(username, password)
-        element = self.login_p.alert_error()
-        WebDriverWait(self.dr, 3).until(lambda self: element.is_displayed())
-        time.sleep(2)
         error_text = self.login_p.alert_error().text
         print(error_text)
         self.assertEqual(error_text, assert_text)
@@ -32,10 +29,10 @@ class TestLogin(unittest.TestCase):
     #登录成功
     def test_login_success(self):
         #login_p = LoginPage(self.dr)
-        myacount_p = self.login_p.login_action("15558524694", "15558524694")
+        myacount_p = self.login_p.login_action("wq1qaz_", "wq15803863660")
         print(self.dr.current_url)
         #myacount_p = MyacountPage(self.dr)
-        time.sleep(3)
+        #time.sleep(3)
         assert_text = myacount_p.login_success_text().text
         print(assert_text)
         self.assertEqual(u"账户总览", assert_text, msg="++++++++++++++")
