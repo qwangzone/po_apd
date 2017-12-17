@@ -21,8 +21,9 @@ class ZhitouxqPage(BasePage):
 
     def toubiao(self, money):
         self.open()
-        time.sleep(3)
-        self.money_text.send_keys(money)
+        self.My_wait(('id', 'amount')).send_keys(money)
+        #time.sleep(3)
+        #self.money_text.send_keys(money)
         self.touzi_button.click()
         self.queren.click()
         time.sleep(3)
