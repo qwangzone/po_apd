@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3acdc069-af72-4130-978e-632e35258e61" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/po_apd.iml" afterPath="$PROJECT_DIR$/.idea/po_apd.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/basepage.py" afterPath="$PROJECT_DIR$/pages/basepage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/zhitouxqpage.py" afterPath="$PROJECT_DIR$/pages/zhitouxqpage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/zhitouzfpage.py" afterPath="$PROJECT_DIR$/pages/zhitouzfpage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_cases/test_zhitoutz.py" afterPath="$PROJECT_DIR$/test_cases/test_zhitoutz.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +21,8 @@
       <file leaf-file-name="test_zhitoutz.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_cases/test_zhitoutz.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="36" column="11" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="36" selection-end-column="11" />
+            <state relative-caret-position="570">
+              <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -46,8 +41,8 @@
       <file leaf-file-name="loginpage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/loginpage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="11" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="30" selection-end-column="11" />
+            <state relative-caret-position="510">
+              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -135,9 +130,9 @@
         <option value="$PROJECT_DIR$/test_cases/test_login.py" />
         <option value="$PROJECT_DIR$/pages/loginpage.py" />
         <option value="$PROJECT_DIR$/pages/zhitouzfpage.py" />
-        <option value="$PROJECT_DIR$/test_cases/test_zhitoutz.py" />
         <option value="$PROJECT_DIR$/pages/basepage.py" />
         <option value="$PROJECT_DIR$/pages/zhitouxqpage.py" />
+        <option value="$PROJECT_DIR$/test_cases/test_zhitoutz.py" />
       </list>
     </option>
   </component>
@@ -474,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513504308473</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="用显式等待替换sleep方法，加快脚本运行速度">
+      <created>1513733521358</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1513733521358</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -490,7 +492,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33188722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33188722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33188722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -518,6 +520,14 @@
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
               </option>
             </State>
           </value>
@@ -783,14 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/loginpage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="11" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="30" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/zhitouzfpage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -815,10 +817,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/loginpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_cases/test_zhitoutz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="36" column="11" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="36" selection-end-column="11" />
+        <state relative-caret-position="570">
+          <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
           <folding />
         </state>
       </provider>

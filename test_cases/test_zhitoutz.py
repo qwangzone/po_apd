@@ -19,7 +19,7 @@ class TestZhitoutz(myunit.MyTest):
         #调用登录方法
         login_p = LoginPage(self.dr)
         login_p.login_action("15658524692", "wq123456")
-        time.sleep(3)
+        #time.sleep(3)
         self.touzi_p = ZhitouxqPage(self.dr)
 
     def test_zhitoutz(self):
