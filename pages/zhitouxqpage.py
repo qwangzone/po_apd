@@ -5,7 +5,7 @@ import time
 
 
 class ZhitouxqPage(BasePage):
-    url = "/licai/12399"
+    url = "/licai/12607"
 
     @property
     def money_text(self):
@@ -26,7 +26,8 @@ class ZhitouxqPage(BasePage):
         #self.money_text.send_keys(money)
         self.touzi_button.click()
         self.queren.click()
-        time.sleep(3)
+        self.My_wait(('tag name', 'button'))
+        #time.sleep(3)
         return ZhitouzfPage(self.driver)
 
     def toubiao_error(self,money):

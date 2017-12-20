@@ -1,7 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 class BasePage(object):
-    base_url = "http://www.apengdai.com/"
+    base_url = "http://mk-2.apengdai.com/"
 
     def __init__(self, driver, domain=base_url):
         self.driver = driver

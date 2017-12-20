@@ -18,7 +18,7 @@ class TestZhitoutz(myunit.MyTest):
         self.dr.maximize_window()
         #调用登录方法
         login_p = LoginPage(self.dr)
-        login_p.login_action("14458525690", "14458525690")
+        login_p.login_action("15658524692", "wq123456")
         time.sleep(3)
         self.touzi_p = ZhitouxqPage(self.dr)
 
@@ -29,9 +29,9 @@ class TestZhitoutz(myunit.MyTest):
         balance_f1 = float(balance1.replace(',', ''))
         balance_before = int(balance_f1)
         zhifu_p = self.touzi_p.toubiao("100")
-        time.sleep(3)
+        #time.sleep(3)
         zhifu_p.zhifubutton()
-        time.sleep(3)
+        #time.sleep(3)
         zhifu_p.huishang("123456")
         time.sleep(5)
         #断言
@@ -84,9 +84,9 @@ class TestZhitoutz(myunit.MyTest):
 
 
 if __name__ == '__main__':
-    # suit = unittest.TestSuite()
-    # suit.addTest(TestZhitoutz('test_input0'))
-    # runner = unittest.TextTestRunner()
-    # runner.run(suit)
-    unittest.main()
+    suit = unittest.TestSuite()
+    suit.addTest(TestZhitoutz('test_zhitoutz'))
+    runner = unittest.TextTestRunner()
+    runner.run(suit)
+    # unittest.main()
 
